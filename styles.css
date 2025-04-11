@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+    height: 100svh;
+    width: 100svw;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.test{
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    width: 50%;
+    height: 35%;
+    display: flex;
+}
+
+.hello{
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+}
