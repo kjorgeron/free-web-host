@@ -36,6 +36,11 @@ body{
     background-color: var(--background_color);
 }
 
+.action_bar > button:active, .action_bar > button:focus, .action_bar > button.active {
+    border-color: red;
+    color: red;
+}
+
 .content{
     grid-area: content;
     background-color: var(--background_color);
@@ -82,6 +87,6 @@ body{
 
 @media screen and (max-width: 768px) {
     .action_bar > button{
-        font-size: 100%;
+        display: none;
     }
 }
