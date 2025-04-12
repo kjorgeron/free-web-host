@@ -1,9 +1,15 @@
+:root{
+    --background_color: black;
+    --border_color: white;
+    --font_color: white;
+}
+
 body{
     margin: 0;
     padding: 0;
     height: 100svh;
     width: 100svw;
-    background-color: blue;
+    background-color: var(--background_color);
     display: grid;
     grid-template-areas: 
     'actions'
@@ -13,12 +19,26 @@ body{
 
 .action_bar{
     grid-area: actions;
-    background-color: orange;
+    background-color: var(--background_color);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.action_bar > button{
+    margin: 0.5%;
+    height: 50%;
+    width: 15%;
+    font-size: 140%;
+    border-radius: 5%;
+    border-color: var(--border_color);
+    color: var(--font_color);
+    background-color: var(--background_color);
 }
 
 .content{
     grid-area: content;
-    background-color: blueviolet;
+    background-color: var(--background_color);
     display: grid;
     grid-template-areas: 
     'left_bar center right_bar';
@@ -27,7 +47,7 @@ body{
 
 .left_bar{
     grid-area: left_bar;
-    background-color: chartreuse;
+    background-color: var(--background_color);
 }
 
 .center{
@@ -39,13 +59,14 @@ body{
 
 .right_bar{
     grid-area: right_bar;
-    background-color: crimson;
+    background-color: var(--background_color);
 }
 
 .test{
     align-items: center;
     justify-content: center;
-    border: 2px solid white;
+    border: 2px solid;
+    border-color: var(--border_color);
     width: 50%;
     height: 35%;
     display: flex;
@@ -55,5 +76,12 @@ body{
     text-align: center;
     font-size: 32px;
     font-weight: bold;
-    color: white;
+    color: var(--font_color);
+}
+
+
+@media screen and (max-width: 768px) {
+    .action_bar > button{
+        font-size: 100%;
+    }
 }
