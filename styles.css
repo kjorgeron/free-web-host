@@ -1,11 +1,45 @@
 body{
     margin: 0;
+    padding: 0;
     height: 100svh;
     width: 100svw;
     background-color: blue;
+    display: grid;
+    grid-template-areas: 
+    'actions'
+    'content';
+    grid-template-rows: 10% auto;
+}
+
+.action_bar{
+    grid-area: actions;
+    background-color: orange;
+}
+
+.content{
+    grid-area: content;
+    background-color: blueviolet;
+    display: grid;
+    grid-template-areas: 
+    'left_bar center right_bar';
+    grid-template-columns: 20% auto 20%;
+}
+
+.left_bar{
+    grid-area: left_bar;
+    background-color: chartreuse;
+}
+
+.center{
+    grid-area: center;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.right_bar{
+    grid-area: right_bar;
+    background-color: crimson;
 }
 
 .test{
