@@ -57,6 +57,7 @@ body {
     border-color: var(--border_color);
     /* border: none; */
     color: var(--font_color);
+    aspect-ratio: 1 / 1; /* Ensures it stays square */
     font-size: 50px;
     margin-right: 0.5%;
     display: flex;
