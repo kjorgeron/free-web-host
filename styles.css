@@ -36,9 +36,13 @@ body{
     background-color: var(--background_color);
 }
 
-.action_bar > button:active, .action_bar > button:focus, .action_bar > button.active {
+.action_bar > button:nth-child(-n+3):active, .action_bar > button:nth-child(-n+3):focus, .action_bar > button.active {
     border-color: red;
     color: red;
+}
+
+.mobile_menu{
+    display: none;
 }
 
 .content{
@@ -88,5 +92,9 @@ body{
 @media screen and (max-width: 768px) {
     .action_bar > button{
         display: none;
+    }
+
+    .mobile_menu{
+        display: block!important;
     }
 }
