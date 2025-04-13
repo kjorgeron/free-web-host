@@ -46,7 +46,8 @@ body {
 .mobile_menu {
     display: none !important;
     background-color: var(--background_color);
-    border-color: var(--border_color);
+    /* border-color: var(--border_color); */
+    border: none;
     color: var(--font_color);
     font-size: 50px;
     margin-right: 10px;
