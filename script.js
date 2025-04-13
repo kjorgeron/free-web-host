@@ -1,8 +1,12 @@
-let hello = document.querySelector('.test')
-
-hello.innerHTML = "<p class='hello'>Hello World!<br>From your local JS!</p>"
-
-
+// Set up action bar buttons
+action_bar = document.querySelector('.action_bar')
+action_bar.innerHTML = `
+        <button class="active">Home</button>
+        <button>About</button>
+        <button>Portfolio</button>
+        <button>Contact</button>
+        <button class="mobile_menu">≡</button>
+`
 
 
 // Select all buttons within the action bar
