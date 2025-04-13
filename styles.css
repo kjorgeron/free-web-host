@@ -25,7 +25,7 @@ body {
     justify-content: flex-end;
 }
 
-.action_bar>button:nth-child(-n+3) {
+.action_bar>button:nth-child(-n+4) {
     margin: 0.5%;
     height: 50%;
     width: 15%;
@@ -36,8 +36,8 @@ body {
     background-color: var(--background_color);
 }
 
-.action_bar>button:nth-child(-n+3):active,
-.action_bar>button:nth-child(-n+3):focus,
+.action_bar>button:nth-child(-n+4):active,
+.action_bar>button:nth-child(-n+4):focus,
 .action_bar>button.active {
     border-color: red;
     color: red;
@@ -101,7 +101,7 @@ body {
 
 
 @media screen and (max-width: 768px) {
-    .action_bar>button {
+    .action_bar>button:nth-child(-n+4) {
         display: none;
     }
 
