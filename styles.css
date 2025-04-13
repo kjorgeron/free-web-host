@@ -1,23 +1,23 @@
-:root{
+:root {
     --background_color: black;
     --border_color: white;
     --font_color: white;
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
     height: 100svh;
     width: 100svw;
     background-color: var(--background_color);
     display: grid;
-    grid-template-areas: 
-    'actions'
-    'content';
+    grid-template-areas:
+        'actions'
+        'content';
     grid-template-rows: 10% auto;
 }
 
-.action_bar{
+.action_bar {
     grid-area: actions;
     background-color: var(--background_color);
     display: flex;
@@ -25,7 +25,7 @@ body{
     justify-content: flex-end;
 }
 
-.action_bar > button:nth-child(-n+3){
+.action_bar>button:nth-child(-n+3) {
     margin: 0.5%;
     height: 50%;
     width: 15%;
@@ -36,51 +36,53 @@ body{
     background-color: var(--background_color);
 }
 
-.action_bar > button:nth-child(-n+3):active, .action_bar > button:nth-child(-n+3):focus, .action_bar > button.active {
+.action_bar>button:nth-child(-n+3):active,
+.action_bar>button:nth-child(-n+3):focus,
+.action_bar>button.active {
     border-color: red;
     color: red;
 }
 
-.mobile_menu{
-    display: none;
+.mobile_menu {
+    display: none !important;
     background-color: var(--background_color);
     border-color: var(--border_color);
     color: var(--font_color);
-    width: 10%;
     font-size: 50px;
     margin-right: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 5%;
 }
 
-.content{
+.content {
     grid-area: content;
     background-color: var(--background_color);
     display: grid;
-    grid-template-areas: 
-    'left_bar center right_bar';
+    grid-template-areas:
+        'left_bar center right_bar';
     grid-template-columns: 20% auto 20%;
 }
 
-.left_bar{
+.left_bar {
     grid-area: left_bar;
     background-color: var(--background_color);
 }
 
-.center{
+.center {
     grid-area: center;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.right_bar{
+.right_bar {
     grid-area: right_bar;
     background-color: var(--background_color);
 }
 
-.test{
+.test {
     align-items: center;
     justify-content: center;
     border: 2px solid;
@@ -90,7 +92,7 @@ body{
     display: flex;
 }
 
-.hello{
+.hello {
     text-align: center;
     font-size: 32px;
     font-weight: bold;
@@ -99,11 +101,11 @@ body{
 
 
 @media screen and (max-width: 768px) {
-    .action_bar > button{
+    .action_bar>button {
         display: none;
     }
 
-    .mobile_menu{
-        display: block!important;
+    .mobile_menu {
+        display: flex !important;
     }
 }
