@@ -49,6 +49,9 @@ body{
     width: 10%;
     font-size: 50px;
     margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .content{
