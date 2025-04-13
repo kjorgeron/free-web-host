@@ -15,6 +15,14 @@ body {
         'actions'
         'content';
     grid-template-rows: 10% auto;
+    user-select: none;
+    /* Prevent text selection */
+    -webkit-user-select: none;
+    /* For Safari/Chrome */
+    -ms-user-select: none;
+    /* For older IE versions */
+    touch-action: manipulation; /* Disable zoom on double-tap */
+
 }
 
 .action_bar {
@@ -46,15 +54,15 @@ body {
 .mobile_menu {
     display: none !important;
     background-color: var(--background_color);
-    /* border-color: var(--border_color); */
-    border: none;
+    border-color: var(--border_color);
+    /* border: none; */
     color: var(--font_color);
     font-size: 50px;
-    margin-right: 10px;
+    margin-right: 0.5%;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 5%;
+    border-radius: 5px;
 }
 
 .content {
