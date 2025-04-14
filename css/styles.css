@@ -16,7 +16,7 @@ body {
         'actions'
         'border'
         'content';
-    grid-template-rows: 10% 2% auto;
+    grid-template-rows: 10% 1% auto;
     user-select: none;
     /* Prevent text selection */
     -webkit-user-select: none;
