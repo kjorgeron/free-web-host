@@ -24,12 +24,6 @@ buttons.forEach(button => {
         // Toggle innerHTML between "≡" and "X"
         if (button.className === "mobile_menu") {
             button.innerHTML = button.innerHTML === "X" ? "≡" : "X";
-            if (button.innerHTML === "X"){
-                button.style.fontSize = "40px"
-            }
-            else {
-                button.style.fontSize = "50px"
-            }
             // Toggle 'active' class based on innerHTML
             if (button.innerHTML === "X") {
                 button.classList.add("active");
