@@ -11,7 +11,7 @@ action_bar.innerHTML = `
         </div>
 `
 logo = document.querySelector('.logo')
-logo.innerHTML = `<img src="images/software-engineer-logo-lightmode.png" alt="Logo"/>`
+logo.innerHTML = `<img src="images/software-engineer-logo-darkmode.png" alt="Logo"/>`
 
 // Select all buttons within the action bar
 const buttons = document.querySelectorAll('.nav');
