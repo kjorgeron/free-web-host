@@ -2,6 +2,7 @@
     --background_color: black;
     --border_color: white;
     --font_color: white;
+    --dark_theme: red;
 }
 
 body {
@@ -21,7 +22,8 @@ body {
     /* For Safari/Chrome */
     -ms-user-select: none;
     /* For older IE versions */
-    touch-action: manipulation; /* Disable zoom on double-tap */
+    touch-action: manipulation;
+    /* Disable zoom on double-tap */
 
 }
 
@@ -30,10 +32,31 @@ body {
     background-color: var(--background_color);
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px;
+    position: relative;
 }
 
-.action_bar>button:nth-child(-n+4) {
+.action_bar::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%; /* Adjust width as needed */
+    height: 2px; /* Adjust height as needed */
+    background-color: var(--dark_theme); /* Adjust color as needed */
+  }
+
+.action_bar>.nav_links {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.action_bar>.nav_links>.nav {
     margin: 0.5%;
     height: 50%;
     width: 15%;
@@ -42,29 +65,52 @@ body {
     border-color: var(--border_color);
     color: var(--font_color);
     background-color: var(--background_color);
+    flex: 0 1 auto;
+
 }
 
-.action_bar>button:nth-child(-n+4):active,
-.action_bar>button:nth-child(-n+4):focus,
-.action_bar>button.active {
+.action_bar>.nav_links>.nav:active,
+.action_bar>.nav_links>.nav:focus,
+.action_bar>.nav_links>.nav.active {
     border-color: red;
     color: red;
 }
 
-.mobile_menu {
+
+.action_bar>.nav_links>.mobile_menu.active {
+    border-color: red;
+    color: red;
+}
+
+
+.action_bar>.nav_links>.mobile_menu {
     display: none !important;
     background-color: var(--background_color);
     border-color: var(--border_color);
     color: var(--font_color);
-    aspect-ratio: 1 / 1; /* Ensures it stays square */
+    aspect-ratio: 1 / 1;
+    /* Ensures it stays square */
     margin: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 50px;
-    width: 50px; /* Adjust based on text length */
-    height: 50px; /* Slightly taller for padding */
-    border-radius: 10px; /* Optional for rounded corners */
+    width: 50px;
+    /* Adjust based on text length */
+    height: 50px;
+    /* Slightly taller for padding */
+    border-radius: 10px;
+    /* Optional for rounded corners */
+}
+
+.logo {
+    flex: 0 1 auto;
+    /* Ensures it stays at the start */
+}
+
+.logo>img {
+    height: 80px;
+    width: 80px;
 }
 
 .content {
@@ -112,11 +158,11 @@ body {
 
 
 @media screen and (max-width: 768px) {
-    .action_bar>button:nth-child(-n+4) {
+    .action_bar>.nav_links>.nav {
         display: none;
     }
 
-    .mobile_menu {
+    .action_bar>.nav_links>.mobile_menu {
         display: flex !important;
     }
 }
