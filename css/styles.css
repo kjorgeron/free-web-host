@@ -58,7 +58,7 @@ body {
     margin: 0.5%;
     height: 50%;
     width: 15%;
-    font-size: 140%;
+    font-size: 2rem;
     border-radius: 5%;
     border-color: var(--border_color);
     color: var(--font_color);
@@ -107,8 +107,8 @@ body {
 }
 
 .logo>img {
-    height: 80px;
-    width: 80px;
+    height: 10svh;
+    width: 10svw;
 }
 
 .content {
@@ -153,5 +153,20 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .logo > img{
+        height: 80px;
+        width: 80px;
+    }
+}
+
+@media (min-width: 2560px) {
+    .action_bar>.nav_links>.nav {
+        font-size: 3rem;
+    }
+    .logo > img {
+        width: 10svw;
+        height: 10svh;
     }
 }
