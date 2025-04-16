@@ -101,7 +101,7 @@ body {
     /* Optional for rounded corners */
 }
 
-.toggle_mode{
+.toggle_mode {
     height: 1.5rem;
     width: 4rem;
     border: 1px solid var(--theme);
@@ -113,7 +113,7 @@ body {
     margin-right: 10rem;
 }
 
-.switch{
+.switch {
     height: 2rem;
     width: 2rem;
     border-radius: 50%;
@@ -190,12 +190,13 @@ body {
         width: 10svw;
         height: 10svh;
     }
-    .toggle_mode{
+
+    .toggle_mode {
         height: 3rem;
         width: 8rem;
     }
 
-    .switch{
+    .switch {
         height: 3rem;
         width: 3rem;
     }
