@@ -2,7 +2,7 @@
     --background_color: black;
     --border_color: white;
     --font_color: white;
-    --dark_theme: red;
+    --theme: red;
 }
 
 body {
@@ -31,7 +31,7 @@ body {
 .custom_border {
     grid-area: border;
     width: auto;
-    border-bottom: 1px solid var(--dark_theme);
+    border-bottom: 1px solid var(--theme);
     margin: 0 15% 0 15%;
 }
 
@@ -101,6 +101,25 @@ body {
     /* Optional for rounded corners */
 }
 
+.toggle_mode{
+    height: 1.5rem;
+    width: 4rem;
+    border: 1px solid var(--theme);
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0.5rem;
+    margin-right: 10rem;
+}
+
+.switch{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: var(--font_color);
+}
+
 .logo {
     flex: 0 1 auto;
     /* Ensures it stays at the start */
@@ -138,7 +157,7 @@ body {
 }
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1000px) {
     .action_bar>.nav_links>.nav {
         display: none;
     }
@@ -161,6 +180,7 @@ body {
     }
 }
 
+/* 4k screens */
 @media screen and (min-width: 2560px) {
     .action_bar>.nav_links>.nav {
         font-size: 3rem;
@@ -169,6 +189,15 @@ body {
     .logo>img {
         width: 10svw;
         height: 10svh;
+    }
+    .toggle_mode{
+        height: 3rem;
+        width: 8rem;
+    }
+
+    .switch{
+        height: 3rem;
+        width: 3rem;
     }
 }
 
