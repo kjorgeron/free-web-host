@@ -36,7 +36,7 @@ body {
 }
 
 .action_bar {
-    width: 100svw;
+    width: auto;
     grid-area: actions;
     background-color: var(--background_color);
     display: flex;
@@ -132,7 +132,6 @@ body {
 }
 
 .content {
-    width: 100svw;
     grid-area: content;
     background-color: var(--background_color);
     display: grid;
