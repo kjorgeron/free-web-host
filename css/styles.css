@@ -179,6 +179,10 @@ body {
         height: 80px;
         width: 80px;
     }
+
+    .toggle_mode{
+        display: none;
+    }
 }
 
 /* 4k screens */
