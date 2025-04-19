@@ -68,8 +68,8 @@ body {
 
 }
 
-/* .action_bar>.nav_links>.nav:active,
-.action_bar>.nav_links>.nav:focus, */
+.action_bar>.nav_links>.nav:active,
+.action_bar>.nav_links>.nav:focus,
 .action_bar>.nav_links>.nav.active {
     border-color: var(--theme);
     color: var(--theme);
