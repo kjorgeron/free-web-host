@@ -13,7 +13,7 @@ action_bar.innerHTML = `
 </div>
 `
 logo = document.querySelector('.logo')
-logo.innerHTML = `<img src="images/software-engineer-logo-darkmode.png" alt="Logo"/>`
+logo.innerHTML = `<img src="images/software-engineer-logo-darkmode-small.png" alt="Logo"/>`
 
 
 // Select all buttons within the action bar
@@ -62,7 +62,7 @@ switch_mode.addEventListener('click', event => {
             root.style.setProperty('--border_color', 'black')
             root.style.setProperty('--font_color', 'black')
             icon.style.backgroundColor = "black"
-            logo.innerHTML = `<img src="images/software-engineer-logo-lightmode.png" alt="Logo"/>`
+            logo.innerHTML = `<img src="images/software-engineer-logo-lightmode-small.png" alt="Logo"/>`
             break
         case "rgb(0, 0, 0)": // black
             switch_mode.style.justifyContent = "flex-end"
@@ -72,7 +72,7 @@ switch_mode.addEventListener('click', event => {
             root.style.setProperty('--border_color', 'white')
             root.style.setProperty('--font_color', 'white')
             icon.style.backgroundColor = "white"
-            logo.innerHTML = `<img src="images/software-engineer-logo-darkmode.png" alt="Logo"/>`
+            logo.innerHTML = `<img src="images/software-engineer-logo-darkmode-small.png" alt="Logo"/>`
             break
         default:
             break
