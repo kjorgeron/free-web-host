@@ -68,17 +68,17 @@ body {
 
 }
 
-.action_bar>.nav_links>.nav:active,
-.action_bar>.nav_links>.nav:focus,
+/* .action_bar>.nav_links>.nav:active,
+.action_bar>.nav_links>.nav:focus, */
 .action_bar>.nav_links>.nav.active {
-    border-color: red;
-    color: red;
+    border-color: var(--theme);
+    color: var(--theme);
 }
 
 
 .action_bar>.nav_links>.mobile_menu.active {
-    border-color: red;
-    color: red;
+    border-color: var(--theme);
+    color: var(--theme);
 }
 
 
