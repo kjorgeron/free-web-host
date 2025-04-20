@@ -16,8 +16,10 @@ action_bar.innerHTML = `
 
 // const mobile_box = document.querySelector('.custom_border')
 mobile_box.innerHTML = `
-<div class="mobile_btn_box">
+<div class="mobile_toggle_box">
 <div class="mobile_toggle_mode"><div class="mobile_switch"></div></div>
+</div>
+<div class="mobile_btn_box">
 <button class="mobile_nav active">Home</button>
 <button class="mobile_nav">About</button>
 <button class="mobile_nav">Portfolio</button>
@@ -39,6 +41,7 @@ const mobile_nav_buttons = document.querySelectorAll('.custom_border .mobile_btn
 const mobile_menu_button = document.querySelector('.action_bar .nav_links .mobile_menu');
 const mobile_toggle_mode = document.querySelector('.mobile_toggle_mode')
 const mobile_button_box = document.querySelector('.mobile_btn_box')
+const mobile_toggle_box = document.querySelector('.mobile_toggle_box')
 
 // NAV BUTTON ACTIVATION EVENT
 nav_buttons.forEach(button => {
@@ -78,12 +81,14 @@ mobile_menu_button.addEventListener('click', (event) => {
         body.style.gridTemplateRows = "10% 35% auto"
         setTimeout(() => {
             mobile_button_box.style.scale = "1"
+            mobile_toggle_box.style.scale = "1"
         }, 500);
     } else {
         event.target.classList.remove("active");
         mobile_box.style.borderRadius = "unset"
         body.style.gridTemplateRows = "10% 1% auto"
         mobile_button_box.style.scale = "0"
+        mobile_toggle_box.style.scale = "0"
         setTimeout(() => {
             // mobile_box.style.transition = "none"
             body.style.transition = "none"

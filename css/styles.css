@@ -16,7 +16,8 @@ body {
         'actions'
         'border'
         'content';
-    grid-template-rows: 10% 1% auto; /* was 10% 1% auto*/
+    grid-template-rows: 10% 1% auto;
+    /* was 10% 1% auto*/
     user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
@@ -30,6 +31,11 @@ body {
     border-bottom: 1px solid var(--theme);
     margin: 0 15% 0 15%;
     transition: ease-in-out 1s;
+    display: grid;
+    grid-template-areas: 
+    'toggle'
+    'buttons';
+    grid-template-rows: 20% auto;
 }
 
 .custom_border>.mobile_btn_box {
@@ -41,9 +47,10 @@ body {
     width: auto;
     flex-direction: column;
     transition: ease-in-out 0.5s;
+    grid-area: buttons;
 }
 
-.custom_border>.mobile_btn_box > .mobile_nav{
+.custom_border>.mobile_btn_box>.mobile_nav {
     margin: 0.5%;
     height: auto;
     width: 90%;
@@ -66,7 +73,6 @@ body {
     margin: 10px;
     position: relative;
 }
-
 
 .action_bar>.nav_links {
     width: 100%;
@@ -94,7 +100,6 @@ body {
     border-color: var(--theme);
     color: var(--theme);
 }
-
 
 .action_bar>.nav_links>.mobile_menu.active {
     border-color: var(--theme);
@@ -145,7 +150,18 @@ body {
     background-color: var(--font_color);
 }
 
-.mobile_toggle_mode{
+.mobile_toggle_box{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    grid-area: toggle;
+    scale: 0;
+    transition: ease-in-out 0.5s;
+}
+
+.mobile_toggle_mode {
     height: 1.5rem;
     width: 4rem;
     border: 1px solid var(--theme);
@@ -154,11 +170,10 @@ body {
     align-items: center;
     justify-content: flex-end;
     padding: 0.5rem;
-    margin-right: -75%;
-    margin-bottom: 1%;
+    margin-right: 1rem;
 }
 
-.mobile_switch{
+.mobile_switch {
     height: 2rem;
     width: 2rem;
     border-radius: 50%;
@@ -224,7 +239,7 @@ body {
         width: 80px;
     }
 
-    .toggle_mode{
+    .toggle_mode {
         display: none;
     }
 
@@ -258,7 +273,7 @@ body {
         width: 3rem;
     }
 
-    .custom_border>.mobile_btn_box{
+    .custom_border>.mobile_btn_box {
         display: none;
     }
 }
