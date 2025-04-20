@@ -14,7 +14,6 @@ action_bar.innerHTML = `
 </div>
 `
 
-// const mobile_box = document.querySelector('.custom_border')
 mobile_box.innerHTML = `
 <div class="mobile_toggle_box">
 <div class="mobile_toggle_mode"><div class="mobile_switch"></div></div>
@@ -67,13 +66,11 @@ mobile_nav_buttons.forEach(button => {
 
 // MOBILE MENU BUTTON EVENT
 mobile_menu_button.addEventListener('click', (event) => {
-    // Toggle innerHTML between "≡" and "X"
+
     event.target.innerHTML = event.target.innerHTML === "X" ? "≡" : "X";
 
-    // Toggle 'active' class based on innerHTML
     if (event.target.innerHTML === "X") {
         event.target.classList.add("active");
-        // mobile_box.style.transition = "ease-in-out 1s"
         body.style.transition = "ease-in-out 1s"
         mobile_box.style.borderRight = "1px solid var(--theme)"
         mobile_box.style.borderLeft = "1px solid var(--theme)"
@@ -90,7 +87,6 @@ mobile_menu_button.addEventListener('click', (event) => {
         mobile_button_box.style.scale = "0"
         mobile_toggle_box.style.scale = "0"
         setTimeout(() => {
-            // mobile_box.style.transition = "none"
             body.style.transition = "none"
             mobile_box.style.borderRight = "none"
             mobile_box.style.borderLeft = "none"
