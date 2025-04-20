@@ -16,16 +16,12 @@ body {
         'actions'
         'border'
         'content';
-    grid-template-rows: 10% 1% auto;
+    grid-template-rows: 10% 1% auto; /* was 10% 1% auto*/
     user-select: none;
-    /* Prevent text selection */
     -webkit-user-select: none;
-    /* For Safari/Chrome */
     -ms-user-select: none;
-    /* For older IE versions */
     touch-action: manipulation;
-    /* Disable zoom on double-tap */
-
+    transition: none;
 }
 
 .custom_border {
@@ -33,6 +29,30 @@ body {
     width: auto;
     border-bottom: 1px solid var(--theme);
     margin: 0 15% 0 15%;
+    transition: ease-in-out 1s;
+}
+
+.custom_border>.mobile_btn_box {
+    display: flex;
+    scale: 0;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: auto;
+    flex-direction: column;
+    transition: ease-in-out 0.5s;
+}
+
+.custom_border>.mobile_btn_box > .mobile_nav{
+    margin: 0.5%;
+    height: auto;
+    width: 90%;
+    font-size: 2rem;
+    border-radius: 5%;
+    border-color: var(--border_color);
+    color: var(--font_color);
+    background-color: var(--background_color);
+    flex: 0 1 auto;
 }
 
 .action_bar {
@@ -81,6 +101,10 @@ body {
     color: var(--theme);
 }
 
+.custom_border>.mobile_btn_box>.mobile_nav.active {
+    border-color: var(--theme);
+    color: var(--theme);
+}
 
 .action_bar>.nav_links>.mobile_menu {
     display: none !important;
@@ -115,6 +139,26 @@ body {
 }
 
 .switch {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: var(--font_color);
+}
+
+.mobile_toggle_mode{
+    height: 1.5rem;
+    width: 4rem;
+    border: 1px solid var(--theme);
+    border-radius: 5rem;
+    display: none;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0.5rem;
+    margin-right: -75%;
+    margin-bottom: 1%;
+}
+
+.mobile_switch{
     height: 2rem;
     width: 2rem;
     border-radius: 50%;
@@ -157,7 +201,7 @@ body {
     background-color: var(--background_color);
 }
 
-
+/* Mobile view */
 @media screen and (max-width: 1000px) {
     .action_bar>.nav_links>.nav {
         display: none;
@@ -183,6 +227,14 @@ body {
     .toggle_mode{
         display: none;
     }
+
+    .mobile_toggle_mode {
+        display: flex;
+    }
+
+    /* .custom_border>.mobile_btn_box{
+        display: flex;
+    } */
 }
 
 /* 4k screens */
@@ -204,6 +256,10 @@ body {
     .switch {
         height: 3rem;
         width: 3rem;
+    }
+
+    .custom_border>.mobile_btn_box{
+        display: none;
     }
 }
 
